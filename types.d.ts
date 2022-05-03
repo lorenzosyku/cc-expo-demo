@@ -3,7 +3,7 @@ export type RootStackParamList = {
   Profile: undefined;
 };
 
-export type homeScreenProp = NativeStackNavigationProp<
+export type NavigationScreenProp = NativeStackNavigationProp<
   RootStackParamList,
   "Home",
   "Profile"
