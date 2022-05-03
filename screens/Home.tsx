@@ -7,12 +7,9 @@ const Home = () => {
     console.log("you clicked");
   };
   return (
-    <View>
-      <Text>this is the home screen</Text>
-      <View style={styles.container}>
-        <Text>my First react native app!</Text>
-        <Button title="Click me" onPress={handleClick} />
-      </View>
+    <View style={styles.container}>
+      <Text>my First react native app!</Text>
+      <Button title="Click me" onPress={handleClick} />
     </View>
   );
 };
