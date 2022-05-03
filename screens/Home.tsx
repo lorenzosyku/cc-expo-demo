@@ -3,7 +3,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { NativeSyntheticEvent, NativeTouchEvent } from "react-native";
-import { homeScreenProp } from "../App";
+import { homeScreenProp } from "../types";
 
 const Home = () => {
   const navigation = useNavigation<homeScreenProp>();
