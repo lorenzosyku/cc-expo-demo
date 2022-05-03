@@ -1,10 +1,14 @@
+import { useNavigation } from "@react-navigation/core";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { NativeSyntheticEvent, NativeTouchEvent } from "react-native";
+import { homeScreenProp } from "../App";
 
 const Home = () => {
+  const navigation = useNavigation<homeScreenProp>();
   const handleClick = (ev: NativeSyntheticEvent<NativeTouchEvent>) => {
-    console.log("you clicked");
+    navigation.navigate("Profile");
   };
   return (
     <View style={styles.container}>
