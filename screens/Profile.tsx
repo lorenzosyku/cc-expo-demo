@@ -1,10 +1,21 @@
 import { useNavigation } from "@react-navigation/core";
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationScreenProp } from "../types";
 
 const Profile = () => {
   const navigation = useNavigation<NavigationScreenProp>();
+  const [dadjoke, setDadJoke] = useState<string>();
+
+  useEffect(() => {
+    const fetchJoke = async () => {
+      const res = await fetch("https://api.chucknorris.io/jokes/random");
+      const data = await res.json();
+      setDadJoke(data.value);
+    };
+
+    fetchJoke();
+  }, []);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -15,7 +26,8 @@ const Profile = () => {
 
   return (
     <View style={styles.profile}>
-      <Text>this is the profile screen</Text>
+      <Text>The dad joke of the day is:</Text>
+      <Text>{dadjoke}</Text>
     </View>
   );
 };
