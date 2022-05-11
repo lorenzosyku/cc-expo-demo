@@ -11,7 +11,7 @@ const Home = () => {
   };
   return (
     <View style={styles.container}>
-      <Text>my First react native app!</Text>
+      <Text style={styles.line}>my First react native app!</Text>
       <Button title="Click me" onPress={handleClick} />
     </View>
   );
@@ -25,5 +25,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  line: {
+    padding: 10,
   },
 });

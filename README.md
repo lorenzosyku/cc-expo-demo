@@ -1,4 +1,4 @@
-This project is part of a coaching call on React Native.
+This project was part of a coaching call on React Native.
 
 ### Topics covered:
 
