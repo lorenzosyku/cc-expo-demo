@@ -27,8 +27,10 @@ const Profile = () => {
   return (
     <View style={styles.profile}>
       <Text style={styles.content}>The dad joke of the day is:</Text>
-      <Button title="Refresh" onPress={fetchJoke} />
-      <Text>{dadjoke}</Text>
+      <View style={styles.card}>
+        <Text style={styles.content}>{dadjoke}</Text>
+        <Button title="Refresh" onPress={fetchJoke} />
+      </View>
     </View>
   );
 };
@@ -39,11 +41,23 @@ const styles = StyleSheet.create({
   profile: {
     flex: 1,
     backgroundColor: "#fff",
-    padding: 10,
-    margin: 10,
     alignItems: "center",
     justifyContent: "center",
   },
-  content:{
-  }
+  card: {
+    padding: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+  },
+  content: {
+    padding: 10,
+    margin: 10,
+  },
 });
